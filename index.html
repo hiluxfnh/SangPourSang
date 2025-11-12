@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sang Pour Sang — Menstrual Dignity & Justice</title>
+    <meta
+      name="description"
+      content="Sang Pour Sang (WFAC) — Menstrual Dignity & Justice. Project updates, videos, milestones, partners and live reach tracker."
+    />
+    <!-- Open Graph / Social -->
+    <meta
+      property="og:title"
+      content="Sang Pour Sang — Menstrual Dignity & Justice"
+    />
+    <meta
+      property="og:description"
+      content="Campaign updates, videos, graphics and impact tracking for Sang Pour Sang — ending menstrual stigma in Cameroon."
+    />
+    <meta
+      property="og:image"
+      content="images/SpS_LOGO_CMR-removebg-preview.png"
+    />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --accent: #9b1c2b; /* deep red/maroon */
+        --muted: #6b6b6b;
+        --bg: #ffffff;
+        --card: #f8f8f8;
+        --maxw: 1100px;
+        --radius: 10px;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+          "Helvetica Neue", Arial;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: #111;
+        line-height: 1.5;
+      }
+      .wrap {
+        max-width: var(--maxw);
+        margin: 0 auto;
+        padding: 28px;
+      }
+      header {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+        padding: 28px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .logo {
+        width: 120px;
+        height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background: linear-gradient(
+          180deg,
+          rgba(155, 28, 43, 0.12),
+          rgba(155, 28, 43, 0.02)
+        );
+        box-shadow: 0 12px 24px rgba(155, 28, 43, 0.08);
+        transform-origin: center;
+        animation: logoIntro 900ms cubic-bezier(0.2, 0.9, 0.2, 1);
+      }
+      @keyframes logoIntro {
+        0% {
+          opacity: 0;
+          transform: scale(0.6) rotate(-6deg) translateY(-18px);
+        }
+        60% {
+          opacity: 1;
+          transform: scale(1.05) rotate(2deg) translateY(6px);
+        }
+        100% {
+          transform: scale(1) rotate(0) translateY(0);
+        }
+      }
+      .logo img {
+        max-width: 88%;
+        max-height: 88%;
+      }
+      /* Intro overlay */
+      .intro-overlay {
+        position: fixed;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: linear-gradient(
+          180deg,
+          rgba(11, 11, 11, 0.88),
+          rgba(11, 11, 11, 0.95)
+        );
+        z-index: 10050;
+        color: #fff;
+        flex-direction: column;
+        gap: 18px;
+      }
+      .intro-overlay .inner {
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+      .intro-overlay .inner img {
+        width: 92px;
+        height: 92px;
+      }
+      .intro-overlay .tagline {
+        font-family: Poppins, Inter, system-ui;
+        font-size: 1.05rem;
+        letter-spacing: 0.4px;
+      }
+      .intro-overlay.fadeout {
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.6s ease;
+      }
+
+      /* Video modal */
+      .video-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.88);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10040;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.18s ease;
+      }
+      .video-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .video-box {
+        width: 90%;
+        max-width: 980px;
+        height: 56vw;
+        max-height: 640px;
+        background: #000;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+      .video-box iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+      h1 {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+      .tag {
+        color: var(--muted);
+        font-size: 0.95rem;
+      }
+      main {
+        padding: 24px 0;
+      }
+      .grid {
+        display: grid;
+        gap: 20px;
+      }
+      /* Site header — optimized for a presentation-style page */
+      .site-header {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 18px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .site-brand {
+        display: flex;
+        flex-direction: column;
+      }
+      .site-brand .title {
+        font-size: 2rem;
+        margin: 0;
+        font-weight: 800;
+        background: linear-gradient(135deg, #9b1c2b, #d32f2f);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 1px 3px rgba(155, 28, 43, 0.15);
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+      }
+      .title-subtitle {
+        font-size: 1.5rem;
+        font-family: Poppins, Inter, sans-serif;
+      }
+      .site-brand .subtitle {
+        color: var(--muted);
+        font-size: 0.95rem;
+        margin-top: 6px;
+      }
+      .hashtags {
+        display: flex;
+        gap: 8px;
+        margin-top: 10px;
+        flex-wrap: wrap;
+      }
+      .hashtags .tag {
+        background: #fff;
+        border: 1px solid rgba(155, 28, 43, 0.12);
+        color: var(--accent);
+        padding: 6px 10px;
+        border-radius: 999px;
+        font-size: 0.82rem;
+        font-weight: 600;
+      }
+      .partners-inline {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+      .partners-inline img {
+        height: 44px;
+        object-fit: contain;
+        background: #fff;
+        padding: 6px;
+        border-radius: 6px;
+        border: 1px solid #eee;
+      }
+      @media (max-width: 760px) {
+        .site-header {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .partners-inline {
+          margin-top: 8px;
+        }
+      }
+      .hero {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        padding: 20px;
+        border-radius: var(--radius);
+        background: linear-gradient(
+          90deg,
+          #fff 60%,
+          rgba(155, 28, 43, 0.02) 100%
+        );
+      }
+      .hero .text h2 {
+        margin: 0 0 8px 0;
+        font-size: 1.25rem;
+      }
+      .hero .text h2 {
+        margin: 0 0 8px 0;
+        font-size: 1.25rem;
+      }
+      .hero .text p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .cta {
+        display: inline-block;
+        background: var(--accent);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 8px;
+        text-decoration: none;
+        margin-top: 12px;
+      }
+      .media-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      }
+      .media-grid > div {
+        background: #f8f8f8;
+        border-radius: 8px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 250px;
+        box-sizing: border-box;
+      }
+      .social-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+      }
+      .social-item {
+        background: #f8f8f8;
+        border-radius: 8px;
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #eee;
+      }
+      iframe {
+        width: 100%;
+        height: 160px;
+        border-radius: 8px;
+        border: 0;
+      }
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 10px;
+      }
+      .gallery img {
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 8px;
+      }
+      .gallery a {
+        display: block;
+        overflow: hidden;
+        border-radius: 8px;
+      }
+      .gallery a img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        transition: transform 0.25s ease;
+        cursor: pointer;
+      }
+      .gallery a img:hover {
+        transform: scale(1.03);
+      }
+
+      /* Toggle button for gallery */
+      .toggle-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        margin-left: 10px;
+        color: var(--accent);
+      }
+
+      /* Lightbox (minimal) */
+      .lb-overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.85);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.18s ease;
+      }
+      .lb-overlay.open {
+        opacity: 1;
+        pointer-events: auto;
+      }
+      .lb-img {
+        max-width: 95%;
+        max-height: 85%;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+        border-radius: 8px;
+      }
+      .lb-nav {
+        position: fixed;
+        top: 50%;
+        left: 16px;
+        transform: translateY(-50%);
+        font-size: 28px;
+        color: #fff;
+        cursor: pointer;
+        z-index: 10000;
+        user-select: none;
+      }
+      .lb-nav.right {
+        left: auto;
+        right: 16px;
+      }
+      .lb-close {
+        position: fixed;
+        top: 18px;
+        right: 18px;
+        color: #fff;
+        font-size: 22px;
+        z-index: 10001;
+        cursor: pointer;
+      }
+      .partners {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .partners img {
+        height: 48px;
+        object-fit: contain;
+        background: #fff;
+        padding: 6px;
+        border-radius: 6px;
+        border: 1px solid #eee;
+      }
+      .timeline {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .timeline li {
+        padding: 12px 0;
+        border-bottom: 1px dashed #eee;
+      }
+      .small {
+        font-size: 0.9rem;
+        color: var(--muted);
+      }
+      footer {
+        padding: 30px 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+        border-top: 1px solid #f1f1f1;
+        margin-top: 20px;
+      }
+      .impact {
+        display: flex;
+        gap: 14px;
+        align-items: center;
+      }
+      .counter {
+        font-weight: 700;
+        color: var(--accent);
+        font-size: 1.5rem;
+      }
+      /* responsive */
+      @media (max-width: 900px) {
+        .two {
+          grid-template-columns: 1fr;
+        }
+        .logo {
+          width: 84px;
+          height: 84px;
+        }
+      }
+    </style>
+    <!-- Modular styles for hero / intro animation -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Animated intro overlay (SVG logo drawn, runs once) -->
+    <div
+      id="intro"
+      class="intro-overlay"
+      role="dialog"
+      aria-hidden="false"
+      aria-label="Sang Pour Sang introduction"
+    >
+      <div class="intro-inner">
+        <!-- PNG logo (transparent background). Wrapped so we can add a subtle backdrop/shadow on white */ -->
+        <div class="intro-logo">
+          <img
+            id="intro-img"
+            src="images/SpS_LOGO_CMR-removebg-preview.png"
+            alt="Sang Pour Sang logo"
+            width="220"
+            height="220"
+          />
+        </div>
+
+        <div class="intro-copy">
+          <div class="brand">Sang Pour Sang</div>
+          <div class="tagline">From Menstrual Shame to Dignity</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <header class="site-header" role="banner">
+        <div class="site-brand">
+          <div class="title">
+            Sang Pour Sang
+            <span class="title-subtitle">— Menstrual Dignity & Justice</span>
+          </div>
+          <div class="subtitle">
+            Project presentation — Women for a Change (WFAC)
+          </div>
+          <div class="hashtags" aria-label="Campaign hashtags">
+            <span class="tag">#FromMenstrualShame2Dignity</span>
+            <span class="tag">#EndPadTaxNow</span>
+            <span class="tag">#DignifiedMenstruation</span>
+            <span class="tag">#December8Challenge</span>
+            <span class="tag">#IDMDay2025</span>
+            <span class="tag">#ReclaimDignity</span>
+          </div>
+        </div>
+
+        <div class="partners-inline" aria-label="Partners and supporters">
+          <!-- Order: AFD, FoS Feminista, Sang Pour Sang (SPS), WFAC -->
+          <img src="images/LogoRVBFranceAFD.jpg" alt="AFD" title="AFD" />
+          <img
+            src="images/Fos Feminista Horizontal Logo - Full Colour.png"
+            alt="FoS Feminista"
+            title="FoS Feminista"
+          />
+          <img
+            src="images/SpS_LOGO_CMR-removebg-preview.png"
+            alt="Sang Pour Sang"
+            title="Sang Pour Sang"
+          />
+          <img src="images/logo wfac.jpeg" alt="WFAC" title="WFAC" />
+        </div>
+      </header>
+
+      <!-- Interactive Highlights tabs (About / Media / Gallery / Timeline) -->
+      <nav
+        id="highlights-tabs"
+        class="highlights-tabs"
+        role="tablist"
+        aria-label="Highlights tabs"
+      >
+        <button
+          role="tab"
+          aria-selected="true"
+          aria-controls="about"
+          data-target="about"
+          class="tab-btn"
+        >
+          About
+        </button>
+        <button
+          role="tab"
+          aria-selected="false"
+          aria-controls="media"
+          data-target="media"
+          class="tab-btn"
+        >
+          Media
+        </button>
+        <button
+          role="tab"
+          aria-selected="false"
+          aria-controls="gallery"
+          data-target="gallery"
+          class="tab-btn"
+        >
+          Gallery
+        </button>
+        <button
+          role="tab"
+          aria-selected="false"
+          aria-controls="timeline"
+          data-target="timeline"
+          class="tab-btn"
+        >
+          Timeline
+        </button>
+      </nav>
+
+      <main>
+        <!-- HERO -->
+        <section class="hero card">
+          <div style="flex: 1">
+            <div class="text">
+              <h2>From Menstrual Shame to Dignity</h2>
+              <p class="small">
+                An 18-month project by Women for a Change (WFAC), supported by
+                AFD & FoS Feminista, and implemented with national partners
+                across Cameroon.
+              </p>
+              <a class="cta" href="#media">View project media & highlights</a>
+            </div>
+          </div>
+
+          <div style="width: 280px; text-align: center">
+            <div class="card small" style="padding: 12px">
+              <div style="font-size: 0.85rem; color: var(--muted)">
+                Already Reached
+              </div>
+              <div id="reach" class="counter">2600+</div>
+            </div>
+            <div class="card small" style="padding: 12px; margin-top: 12px">
+              <img
+                src="images/LinkrBio_QRCode_WfacCmr.png"
+                alt="QR code to WFAC socials"
+                style="width: 100%; max-width: 200px"
+              />
+              <p style="font-size: 0.8rem; color: var(--muted)">
+                Scan to visit our socials
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- TWO COLUMN: left content, right sidebar -->
+        <div class="grid two" style="margin-top: 18px">
+          <div>
+            <!-- ABOUT -->
+            <section class="card" id="about">
+              <h3>About the Project</h3>
+              <p class="small">
+                Sang Pour Sang is an 18-month project by Women for a Change
+                (WFAC), supported by the French Development Agency (AFD) and
+                implemented with Fòs Feminista. The project aims to dismantle
+                menstrual stigma and ensure menstrual dignity across Cameroon.
+                We combine community engagement, youth leadership, policy
+                advocacy, storytelling and research to secure access to
+                menstrual products and promote inclusive norms. Targeting four
+                regions: Littoral, Southwest, Northwest and Far North, the
+                campaign seeks to end the taxation on menstrual products and
+                integrate menstrual health education into school and health
+                policies.
+              </p>
+
+              <h4 style="margin-top: 16px">Objectives</h4>
+              <ul class="small">
+                <li>Promote menstrual dignity as a human right.</li>
+                <li>
+                  End taxation and financial barriers on menstrual products.
+                </li>
+                <li>
+                  Integrate menstrual health into school and health policies.
+                </li>
+                <li>Amplify youth voices and community solutions.</li>
+              </ul>
+
+              <h4 style="margin-top: 12px">Key Achievements</h4>
+              <ul class="small">
+                <li>
+                  Project launched across Littoral, Southwest, Northwest and Far
+                  North regions.
+                </li>
+                <li>
+                  Campaign rollout with video series and community dialogues.
+                </li>
+                <li>
+                  Petition launched calling for removal of pad taxes and
+                  inclusive policies.
+                </li>
+                <li>Trained youth ambassadors and community leaders.</li>
+                <li>
+                  Over 5,000 signatures collected on the petition for pad tax
+                  removal.
+                </li>
+                <li>
+                  Produced a series of short videos amplifying youth voices.
+                </li>
+                <li>
+                  Conducted community dialogues in over 20 locations across
+                  target regions.
+                </li>
+              </ul>
+            </section>
+
+            <!-- MEDIA (Videos) -->
+            <section class="card" id="media" style="margin-top: 18px">
+              <h3>Project Media & Videos</h3>
+              <p class="small">
+                Click any preview to play on YouTube.
+              </p>
+
+              <div class="media-grid" id="video-grid" aria-live="polite">
+                <!-- Video thumbnails will be populated by script. Replace the IDs in the videos[] array in the script at the end of the page. -->
+              </div>
+            </section>
+
+            <!-- GALLERY -->
+            <section class="card" style="margin-top: 18px">
+              <h3>
+                Graphics & Photos
+                <button
+                  class="toggle-btn"
+                  aria-label="Toggle gallery visibility"
+                >
+                  ▼
+                </button>
+              </h3>
+              <p class="small">Campaign assets and creative visuals.</p>
+              <div class="gallery" id="gallery">
+                <a href="images/gallery/survey.png"
+                  ><img src="images/gallery/survey.png" alt="survey"
+                /></a>
+                <a href="images/gallery/SpS Flyer.png"
+                  ><img src="images/gallery/SpS Flyer.png" alt="SpS Flyer"
+                /></a>
+                <a href="images/gallery/1.jpg"
+                  ><img src="images/gallery/1.jpg" alt="1"
+                /></a>
+                <a href="images/gallery/Screenshot 2025-11-12 031723.png"
+                  ><img src="images/gallery/Screenshot 2025-11-12 031723"
+                /></a>
+                <a href="images/gallery/4.jpg"
+                  ><img src="images/gallery/4.jpg" alt="4"
+                /></a>
+                <a href="images/gallery/2.jpg"
+                  ><img src="images/gallery/2.jpg" alt="2"
+                /></a>
+                <a href="images/gallery/Screenshot 2025-11-12 031644.png"
+                  ><img src="images/gallery/Screenshot 2025-11-12 031644"
+                /></a>
+                <a href="images/gallery/3.jpg"
+                  ><img src="images/gallery/3.jpg" alt="3"
+                /></a>
+              </div>
+            </section>
+
+            <!-- TIMELINE / MILESTONES -->
+            <section class="card" style="margin-top: 18px">
+              <h3>Milestones & Timeline</h3>
+              <ul class="timeline small">
+                <li>
+                  <strong>Sept 2025:</strong> Campaign conceptualization &
+                  partnerships finalised.
+                </li>
+                <li>
+                  <strong>Sept 30, 2025:</strong> Launch press conference
+                  (commemoration event).
+                </li>
+                <li>
+                  <strong>Oct 11, 2025:</strong> International Day of the Girl
+                  Child — youth-led live.
+                </li>
+                <li>
+                  <strong>Oct–Nov, 2025:</strong> Regional dialogues & community
+                  trainings.
+                </li>
+                <li>
+                  <strong>Ongoing:</strong> Video series, petition, policy
+                  engagement & monitoring.
+                </li>
+                <li>
+                  <strong>Nov 8, 2025:</strong> International Day of Menstrual
+                  Dignity — global campaign highlight and social media push.
+                </li>
+                <li>
+                  <strong>Nov 12, 2025:</strong> Project website launch and live
+                  reach tracking begins.
+                </li>
+              </ul>
+            </section>
+
+            <!-- SOCIAL POSTS / EMBEDS -->
+            <section class="card" style="margin-top: 18px">
+              <h3>Few Social Posts</h3>
+              <p class="small">Reference social posts and conversations.</p>
+              <div class="social-grid">
+                <div class="social-item small">
+                  <p>
+                    <strong>Tweet 1:</strong>
+                    <a
+                      href="https://x.com/WfacCmr/status/1986518968647971220?s=20"
+                      >View tweet</a
+                    >
+                  </p>
+                </div>
+                <div class="social-item small">
+                  <p>
+                    <strong>Tweet 2:</strong>
+                    <a
+                      href="https://x.com/WfacCmr/status/1987816708766404756?s=20"
+                      >View tweet</a
+                    >
+                  </p>
+                </div>
+                <div class="social-item small">
+                  <p>
+                    <strong>Instagram:</strong>
+                    <a
+                      href="https://www.instagram.com/reel/DQuij4rDTST/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
+                      >View reel</a
+                    >
+                  </p>
+                </div>
+                <div class="social-item small">
+                  <p>
+                    <strong>Facebook:</strong>
+                    <a href="https://www.facebook.com/share/v/1MZeXNEZ57/"
+                      >View post</a
+                    >
+                  </p>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- RIGHT SIDEBAR -->
+          <aside>
+            <div class="card">
+              <h4>Partners & Sponsors</h4>
+              <div class="partners" id="partners">
+                <!-- Order: AFD, FoS Feminista, Sang Pour Sang (SPS), WFAC -->
+                <img
+                  src="images/LogoRVBFranceAFD.jpg"
+                  alt="AFD"
+                  style="height: 52px"
+                />
+                <img
+                  src="images/Fos Feminista Logo - Full Colour.png"
+                  alt="FoS Feminista"
+                  style="
+                    height: 52px;
+                    background: #fff;
+                    padding: 6px;
+                    border-radius: 6px;
+                    border: 1px solid #eee;
+                  "
+                />
+                <img
+                  src="images/SpS LOGO CMR.png"
+                  alt="Sang Pour Sang"
+                  style="height: 52px"
+                />
+                <img
+                  src="images/logo wfac.jpeg"
+                  alt="WFAC"
+                  style="height: 52px"
+                />
+              </div>
+              <p class="small" style="margin-top: 8px">
+                Project implemented with national partners: Lesley Foundation,
+                Girls Excel, AMIS, VIAC, Handicapés et Fiers, and others.
+              </p>
+            </div>
+
+            <div class="card" style="margin-top: 14px">
+              <h4>Get Involved</h4>
+              <p class="small">
+                Sign the petition, join our youth programming, or host a local
+                dialogue. Contact:
+              </p>
+              <p class="small">
+                <strong>Fokou Ngoumo Hilux</strong><br />Communications
+                Specialist, WFAC<br />comms.wfac@gmail.com
+              </p>
+              <a class="cta" href="#petition">Sign the petition</a>
+            </div>
+          </aside>
+        </div>
+      </main>
+
+      <footer>
+        <div class="wrap" style="padding: 0">
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              gap: 12px;
+              flex-wrap: wrap;
+            "
+          >
+            <div class="small">
+              © Women for a Change — Sang Pour Sang Project. All rights
+              reserved.
+            </div>
+            <div class="small">Contact: comms.wfac@gmail.com</div>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script defer src="js/hero.js"></script>
+    <script defer src="js/site.js"></script>
+    <script>
+      /* ========== Optional: Smooth in-page anchor behavior ========== */
+      document.querySelectorAll('a[href^="#"]').forEach((a) => {
+        a.addEventListener("click", (e) => {
+          e.preventDefault();
+          const target = document.querySelector(a.getAttribute("href"));
+          if (target)
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+
+      /* ========== Enhanced galleries: video thumbnails + video lightbox, photo gallery (from manifest) + image lightbox, intro overlay hide ========== */
+      (function () {
+        // --- Intro overlay (legacy auto-hide removed) ---
+        // Intro is now managed by js/hero.js which respects reduced-motion and timing.
+        const intro = document.getElementById("intro");
+
+        // --- Video gallery (thumbnails + lightbox) ---
+        const videos = [
+          // First video (YouTube Shorts) provided by the team
+          {
+            id: "qRkLTPQCkUU",
+            caption: "Launch Short — From Menstrual Shame to Dignity",
+          },
+          { id: "1987816708766404756", type: "tweet", author: "WfacCmr" },
+          { id: "1986518968647971220", type: "tweet", author: "WfacCmr" },
+        ];
+
+        const videoGrid = document.getElementById("video-grid");
+        const videoOverlay = document.createElement("div");
+        videoOverlay.className = "video-overlay";
+        const videoBox = document.createElement("div");
+        videoBox.className = "video-box";
+        const videoFrame = document.createElement("iframe");
+        videoFrame.allow =
+          "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+        videoFrame.allowFullscreen = true;
+        videoBox.appendChild(videoFrame);
+        videoOverlay.appendChild(videoBox);
+        document.body.appendChild(videoOverlay);
+
+        function openVideo(id) {
+          videoFrame.src =
+            "https://www.youtube.com/embed/" + id + "?autoplay=1&rel=0";
+          videoOverlay.classList.add("open");
+        }
+        function closeVideo() {
+          videoFrame.src = "";
+          videoOverlay.classList.remove("open");
+        }
+        videoOverlay.addEventListener("click", (e) => {
+          if (e.target === videoOverlay) closeVideo();
+        });
+        document.addEventListener("keydown", (e) => {
+          if (videoOverlay.classList.contains("open") && e.key === "Escape")
+            closeVideo();
+        });
+
+        if (videoGrid) {
+          videos.forEach((v, i) => {
+            if (v.type === "tweet") {
+              const div = document.createElement("div");
+              div.innerHTML = `<blockquote class="twitter-tweet" data-lang="en"><a href="https://twitter.com/${v.author}/status/${v.id}"></a></blockquote>`;
+              videoGrid.appendChild(div);
+            } else {
+              const div = document.createElement("div");
+              const thumb = document.createElement("button");
+              thumb.className = "";
+              thumb.style.padding = "0";
+              thumb.style.border = "0";
+              thumb.style.cursor = "pointer";
+              thumb.style.background = "transparent";
+              thumb.style.width = "100%";
+              thumb.style.display = "flex";
+              thumb.style.flexDirection = "column";
+              thumb.style.alignItems = "center";
+              thumb.setAttribute(
+                "aria-label",
+                "Play video: " + (v.caption || v.id)
+              );
+              const img = document.createElement("img");
+              img.src = "https://img.youtube.com/vi/" + v.id + "/hqdefault.jpg";
+              img.alt = v.caption || "Video " + (i + 1);
+              img.style.width = "100%";
+              img.style.display = "block";
+              img.loading = "lazy";
+              const cap = document.createElement("div");
+              cap.className = "small";
+              cap.textContent =
+                (i + 1).toString().padStart(2, "0") + " • " + (v.caption || "");
+              thumb.appendChild(img);
+              thumb.addEventListener("click", () => openVideo(v.id));
+              div.appendChild(thumb);
+              div.appendChild(cap);
+              videoGrid.appendChild(div);
+            }
+          });
+        }
+
+        // --- Photo gallery (read manifest images/gallery.json) ---
+        const gallery = document.getElementById("gallery");
+        let photos = [];
+        function buildGallery() {
+          if (!gallery) return;
+          gallery.innerHTML = "";
+          photos.forEach((src, idx) => {
+            const a = document.createElement("a");
+            a.href = src;
+            a.dataset.index = idx;
+            a.rel = "noopener";
+            const img = document.createElement("img");
+            img.dataset.src = src;
+            img.alt = src
+              .split("/")
+              .pop()
+              .replace(/[-_]/g, " ")
+              .replace(/\.[^.]+$/, "");
+            img.loading = "lazy";
+            // lazy-load via small IntersectionObserver
+            img.src = img.dataset.src;
+            a.appendChild(img);
+            gallery.appendChild(a);
+          });
+          attachImageLightbox();
+        }
+
+        // Fetch manifest (local json) then fallback to nothing
+        fetch("images/gallery.json")
+          .then((r) => r.json())
+          .then((list) => {
+            if (Array.isArray(list) && list.length) {
+              photos = list;
+              buildGallery();
+            }
+          })
+          .catch((err) => {
+            // fallback to existing inline list if desired
+            photos = [];
+            buildGallery();
+            console.warn("Could not load gallery manifest", err);
+          });
+
+        // --- Image lightbox (re-usable) ---
+        function attachImageLightbox() {
+          if (!gallery) return;
+          // create controls if not present
+          let overlay = document.querySelector(".lb-overlay");
+          let lbImg, closeBtn, prev, next;
+          if (!overlay) {
+            overlay = document.createElement("div");
+            overlay.className = "lb-overlay";
+            lbImg = document.createElement("img");
+            lbImg.className = "lb-img";
+            overlay.appendChild(lbImg);
+            closeBtn = document.createElement("div");
+            closeBtn.className = "lb-close";
+            closeBtn.innerHTML = "✕";
+            prev = document.createElement("div");
+            prev.className = "lb-nav left";
+            prev.innerHTML = "◀";
+            next = document.createElement("div");
+            next.className = "lb-nav right";
+            next.innerHTML = "▶";
+            document.body.appendChild(overlay);
+            document.body.appendChild(closeBtn);
+            document.body.appendChild(prev);
+            document.body.appendChild(next);
+          } else {
+            lbImg = overlay.querySelector(".lb-img");
+            closeBtn = document.querySelector(".lb-close");
+            prev = document.querySelector(".lb-nav.left");
+            next = document.querySelector(".lb-nav.right");
+          }
+
+          let currentIndex = 0;
+          function openAt(i) {
+            if (!photos.length) return;
+            currentIndex = (i + photos.length) % photos.length;
+            lbImg.src = photos[currentIndex];
+            overlay.classList.add("open");
+            closeBtn.style.display = "block";
+            prev.style.display = "block";
+            next.style.display = "block";
+          }
+          function close() {
+            overlay.classList.remove("open");
+            closeBtn.style.display = "none";
+            prev.style.display = "none";
+            next.style.display = "none";
+          }
+          function showNext(step = 1) {
+            openAt(currentIndex + step);
+          }
+
+          gallery.querySelectorAll("a").forEach((a) => {
+            a.addEventListener("click", (e) => {
+              e.preventDefault();
+              openAt(parseInt(a.dataset.index, 10) || 0);
+            });
+          });
+
+          closeBtn.addEventListener("click", close);
+          overlay.addEventListener("click", (e) => {
+            if (e.target === overlay) close();
+          });
+          prev.addEventListener("click", () => showNext(-1));
+          next.addEventListener("click", () => showNext(1));
+          document.addEventListener("keydown", (e) => {
+            if (!overlay.classList.contains("open")) return;
+            if (e.key === "Escape") close();
+            if (e.key === "ArrowRight") showNext(1);
+            if (e.key === "ArrowLeft") showNext(-1);
+          });
+        }
+      })();
+    </script>
+    <script>
+      // Toggle for gallery
+      const toggleBtn = document.querySelector(".toggle-btn");
+      const galleryDiv = document.getElementById("gallery");
+      if (toggleBtn && galleryDiv) {
+        toggleBtn.addEventListener("click", () => {
+          if (galleryDiv.style.display === "none") {
+            galleryDiv.style.display = "";
+            toggleBtn.textContent = "▼";
+          } else {
+            galleryDiv.style.display = "none";
+            toggleBtn.textContent = "▶";
+          }
+        });
+      }
+    </script>
+    <script
+      async
+      src="https://platform.twitter.com/widgets.js"
+      charset="utf-8"
+    ></script>
+  </body>
+</html>

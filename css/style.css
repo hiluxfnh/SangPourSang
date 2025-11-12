@@ -1,0 +1,99 @@
+:root{
+  --accent:#9b1c2b;
+  --bg:#ffffff;
+  --muted:#6b6b6b;
+}
+
+/* Modular styles for intro animation and hero reveal
+  - Keeps main site styles intact in index.html but centralizes intro/hero animation styles here
+  - Respects prefers-reduced-motion
+*/
+:root{
+  --accent:#9b1c2b;
+  --bg:#ffffff;
+  --muted:#6b6b6b;
+}
+
+/* Ensure overlay sits above everything */
+.intro-overlay{
+  position:fixed;inset:0;display:flex;align-items:center;justify-content:center;
+  /* White full-screen intro as requested */
+  background: #ffffff;
+  z-index:10050;color:#111;flex-direction:column;gap:18px;padding:24px;
+  transition:opacity .6s cubic-bezier(.2,.8,.2,1),transform .6s cubic-bezier(.2,.8,.2,1);
+}
+.intro-overlay.hidden{opacity:0;pointer-events:none;transform:translateY(-6px)}
+
+.intro-inner{display:flex;flex-direction:column;align-items:center;gap:14px}
+
+/* Logo sizing */
+#sps-logo{width:180px;height:180px;display:block}
+
+/* Intro logo wrapper to provide subtle separation on a white canvas */
+.intro-logo{
+  display:flex;align-items:center;justify-content:center;border-radius:20px;padding:8px;/* keeps image from touching edges */
+  /* slight translucent surface and shadow to lift the logo */
+  background: rgba(255,255,255,0.0);
+  box-shadow: 0 18px 36px rgba(17,17,17,0.06);
+}
+
+/* prepare strokes for draw animation */
+/* PNG logo animation: scale + fade, then reveal text */
+#intro-img{
+  width:220px;height:220px;display:block;filter:drop-shadow(0 28px 40px rgba(0,0,0,0.12));opacity:0;transform:scale(.92) translateY(-6px);transition:opacity .6s cubic-bezier(.2,.9,.2,1), transform .6s cubic-bezier(.2,.9,.2,1);
+  border-radius:8px;
+  background:transparent;
+}
+
+/* dot and copy initial state */
+.intro-copy{opacity:0;transform:translateY(10px);transition:opacity .55s ease, transform .55s ease;text-align:center}
+.intro-copy .brand{font-family:Poppins, Inter, system-ui; font-weight:700; font-size:1.25rem; letter-spacing:0.2px}
+.intro-copy .tagline{font-size:0.98rem;color:var(--muted);opacity:.95}
+
+/* Play state: image pops in and copy reveals */
+body.intro-play #intro-img{opacity:1;transform:scale(1) translateY(0)}
+body.intro-play .intro-copy{opacity:1;transform:none}
+
+/* When finished hide overlay gently */
+body.intro-finished .intro-overlay{opacity:0;pointer-events:none}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .intro-copy{transition:none;opacity:1;transform:none}
+  #intro-img{transition:none;opacity:1;transform:none}
+}
+
+/* Small responsive tweak */
+@media (max-width:520px){
+  #sps-logo{width:140px;height:140px}
+  .intro-copy .brand{font-size:1.05rem}
+}
+
+/* Expose a tiny helper class for developers: pause the intro */
+.intro-overlay.pause *{animation-play-state:paused}
+
+/* Highlights tabs (interactive) */
+.highlights-tabs{display:flex;gap:8px;align-items:center;margin:18px 0 12px 0}
+.tab-btn{background:#fff;border:1px solid rgba(17,17,17,0.06);padding:10px 14px;border-radius:999px;cursor:pointer;font-weight:600;color:var(--accent);box-shadow:0 6px 18px rgba(17,17,17,0.03);transition:transform .12s ease, box-shadow .12s ease}
+.tab-btn[aria-selected="true"],.tab-btn.active{background:var(--accent);color:#fff;border-color:transparent;transform:translateY(-2px);box-shadow:0 18px 36px rgba(155,28,43,0.12)}
+.tab-btn:focus{outline:2px solid rgba(155,28,43,0.18);outline-offset:3px}
+
+/* When a section is hidden by tabs, collapse it (desktop only). On small screens keep all visible for readability. */
+.tab-hidden{display:none !important;opacity:0;transform:translateY(6px);transition:opacity .3s ease, transform .3s ease}
+@media (max-width:760px){.tab-hidden{display:block !important;opacity:1;transform:none}}
+
+/* A small card reveal animation when a section becomes active */
+.reveal-card{transform-origin:top center;animation:reveal .42s cubic-bezier(.2,.8,.2,1)}
+@keyframes reveal{0%{opacity:0;transform:translateY(6px) scale(.995)}100%{opacity:1;transform:none}}
+
+/* Media thumbnails grid tweaks */
+.media-grid .card{overflow:hidden;border-radius:10px;padding:0}
+.media-grid img{display:block;width:100%;height:auto}
+
+/* Gallery tweaks: make images slightly larger in the grid */
+.gallery img{height:160px;object-fit:cover;border-radius:8px;transition:transform .18s ease}
+.gallery img:hover{transform:scale(1.04)}
+
+/* Timeline compact styling for presentation */
+.timeline.small{max-width:760px}
+.timeline li{padding:10px 0}
